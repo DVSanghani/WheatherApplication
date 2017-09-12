@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hv1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_margin_10"
+        android:layout_marginTop="@dimen/dimen_margin_10">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/Country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Name"
+            android:layout_marginLeft="3dp"
+            android:padding="3dp"
+            android:text="Country"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/texttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Country"
+            android:layout_marginLeft="7dp"
+            android:layout_toEndOf="@+id/Country"
+            android:layout_toRightOf="@+id/Country"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Time"
+            android:textColor="#FFF"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/map"
+                    class="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_margin_10"
+                android:layout_marginRight="@dimen/dimen_margin_10"
+                android:layout_marginTop="@dimen/dimen_margin_10"
+                android:background="#5F000000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_margin_10"
+                    android:padding="3dp"
+                    android:text="Location"
+                    android:textColor="#FFF"
+                    android:textSize="20dp" />
+
+                <View style="@style/horizontal_devider" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_margin_10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#5F000000"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/List_photo"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_margin_10"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_userimg" />
+
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/List_photo"
+                    android:text="Name = "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_NAME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/text_name"
+                    android:text="Name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/text_region"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_name"
+                    android:layout_toRightOf="@+id/List_photo"
+                    android:text="Region = "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_REGION"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_NAME"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/text_region"
+                    android:maxLines="1"
+                    android:text="Region"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+
+                <TextView
+                    android:id="@+id/textcountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_region"
+                    android:layout_toRightOf="@+id/List_photo"
+                    android:text="Country = "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textcountry"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/textcountry"
+                    android:maxLines="2"
+                    android:text="Country"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dimen_margin_10"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="#5F000000"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_margin_10"
+                        android:text="Current"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:id="@+id/visible1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.3dp"
+                        android:layout_below="@+id/speed"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/border_color" />
+
+                    <TextView
+                        android:id="@+id/textday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/visible1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Day = "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/text_tem_c"
+                        android:layout_toRightOf="@+id/textday"
+                        android:text="Day"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/text_tem_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textday"
+                        android:layout_marginLeft="10dp"
+                        android:text="Temp 'c = "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_tem_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/text_tem_c"
+                        android:layout_toRightOf="@+id/text_tem_c"
+                        android:text="Temp 'c"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+
+                    <TextView
+                        android:id="@+id/text_tem_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_tem_c"
+                        android:layout_marginLeft="10dp"
+                        android:text="Temp 'f = "
+
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_tem_f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/text_tem_f"
+                        android:layout_alignBottom="@+id/text_tem_f"
+                        android:layout_toRightOf="@+id/text_tem_f"
+                        android:text="Temp 'f"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="#5F000000"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/wind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_margin_10"
+                        android:text="Wind"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+
+                    <View
+                        android:id="@+id/visible2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.3dp"
+                        android:layout_below="@+id/wind"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/border_color" />
+
+                    <TextView
+                        android:id="@+id/text_wind_mph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wind"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Wind mph = "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_wind_mphh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/textView_wind_kphh"
+                        android:layout_toEndOf="@+id/text_wind_mph"
+                        android:layout_toRightOf="@+id/text_wind_mph"
+                        android:maxLines="1"
+                        android:text="wind mph "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/text_wind_mkh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_wind_mph"
+                        android:layout_marginLeft="10dp"
+                        android:text="Wind kph = "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_wind_kphh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/text_wind_mkh"
+                        android:layout_alignBottom="@+id/text_wind_mkh"
+                        android:layout_toEndOf="@+id/text_wind_mkh"
+                        android:layout_toRightOf="@+id/text_wind_mkh"
+                        android:maxLines="1"
+                        android:text="wind kph"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+
+                    <TextView
+                        android:id="@+id/text_wind_degree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_wind_mkh"
+                        android:layout_marginLeft="10dp"
+                        android:text="Wind Deg = "
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+                    <TextView
+                        android:id="@+id/textView_wind_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/text_wind_degree"
+                        android:layout_toRightOf="@+id/text_wind_degree"
+                        android:maxLines="1"
+                        android:text="wind Degree"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFF" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_margin_10"
+                android:layout_marginRight="@dimen/dimen_margin_10"
+                android:layout_marginTop="@dimen/dimen_margin_10"
+                android:background="#5F000000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/astro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_margin_10"
+                    android:padding="3dp"
+                    android:text="Astro"
+                    android:textColor="#FFF"
+                    android:textSize="20dp" />
+
+                <View style="@style/horizontal_devider" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_margin_10"
+                android:layout_marginLeft="@dimen/dimen_margin_10"
+                android:layout_marginRight="@dimen/dimen_margin_10"
+                android:background="#5F000000"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/text_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Sunrise = "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_sunrise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/text_sunrise"
+                    android:text="sunrise"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/text_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_sunrise"
+                    android:layout_marginLeft="10dp"
+                    android:text="Sunset = "
+
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_sunset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_sunrise"
+                    android:layout_toRightOf="@+id/text_sunset"
+                    android:text="Sunset"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/text_moonrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_sunset"
+                    android:layout_marginLeft="10dp"
+                    android:text="Moonrise = "
+
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_moonrise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/text_moonrise"
+                    android:layout_alignBottom="@+id/text_moonrise"
+                    android:layout_toRightOf="@+id/text_moonrise"
+                    android:text="oonrise"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/text_moonset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_moonrise"
+                    android:layout_marginLeft="10dp"
+                    android:text="Moonset = "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+                <TextView
+                    android:id="@+id/textView_moonset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/text_moonset"
+                    android:layout_toRightOf="@+id/text_moonset"
+                    android:text="moonset"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_margin_10"
+                android:layout_marginRight="@dimen/dimen_margin_10"
+                android:background="#5F000000"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/temperture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_margin_10"
+                    android:text="Temperture"
+                    android:textColor="#FFF"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_margin_10"
+                android:layout_marginLeft="@dimen/dimen_margin_10"
+                android:layout_marginRight="@dimen/dimen_margin_10" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

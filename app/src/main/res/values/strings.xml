@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">WheatherApplication</string>
+    <string name="time">Time</string>
+    <string name="enter_email">Email</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="yes">Yes</string>
+    <string name="internet_connection">Please Check Your Internet Connection</string>
+
+    <string-array name="country_arrays">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+</resources>

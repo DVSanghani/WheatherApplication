@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_margin_10">10dp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="padding_margin_3">3dp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="padding_margin_10">10dp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="height_width_48">48dp</dimen>
+    <dimen name="padding_margin_13">13dp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="viewHeight">48dp</dimen>
+    <dimen name="text_xlarge">18sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="text_xxlarge">28sp</dimen>
+
+</resources>
